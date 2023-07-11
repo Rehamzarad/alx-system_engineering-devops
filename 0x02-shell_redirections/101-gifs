@@ -1,6 +1,3 @@
 #!/bin/bash
-# Find all files with .gif extension in the current directory and all subdirectories
-# Sort by byte values case-insensitive and display only the filename without the extension
-# Display one file per line
 find . -type f -iname '*.gif' | sort -f | sed 's/\(.*\/\)\?\(.*\)\..*/\2/'
 echo # Print a newline at the end 
