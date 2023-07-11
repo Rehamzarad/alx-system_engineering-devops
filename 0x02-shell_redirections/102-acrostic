@@ -1,0 +1,2 @@
+#!/bin/bash
+echo -e "${acrostic}" | tr -d '\n'
