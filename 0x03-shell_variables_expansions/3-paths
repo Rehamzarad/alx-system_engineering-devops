@@ -1,4 +1,2 @@
 #!/bin/bash
-path_dirs=$(echo $PATH | tr : '\n')
-num_dirs=$(echo "$path_dirs" | wc -l)
-echo $num_dirs
+echo $((' echo $PATH | grep -o ":/" wc -1 ' -1)) 
