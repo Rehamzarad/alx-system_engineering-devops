@@ -1,2 +1,10 @@
 #!/bin/bash
-set
+
+echo "Local variables:"
+declare -p | grep -v "declare -[aA]" | grep -v "BASH" | grep -v "PWD" | grep -v "SHLVL"
+
+echo "Environment variables:"
+declare -p | grep "declare -x"
+
+echo "Functions:"
+declare -f
